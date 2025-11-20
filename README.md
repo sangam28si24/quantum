@@ -52,53 +52,16 @@ This loop repeats, iteratively driving the energy towards the true quantum mecha
 
 Simulation Details
 
-Component
+| Component          | Quantum Significance                                                                                              | Value / Technique Used                                   |
+|--------------------|--------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
+| **Molecule Geometry** | Defines the fixed nuclear potential.                                                                               | $\text{O}(0,0,0); \text{H}(\pm 0.757, 0.586, 0)$          |
+| **Basis Set**         | Dictates the dimensionality of the electronic problem (number of molecular orbitals).                            | STO-3G (Minimal Basis Set)                               |
+| **Mapping**           | Bridge between chemistry (fermions) and quantum computing (qubits).                                              | JordanWignerMapper                                       |
+| **Initial State**     | Provides a reasonable starting point for the VQE optimization.                                                    | HartreeFock state                                        |
+| **Ansatz**            | Quantum circuit structure used to prepare the trial wavefunction $\Psi(\vec{\theta})$.                           | UCCSD                                                     |
+| **Optimizer**         | Classical routine to find the optimal parameters $\vec{\theta}$.                                                  | SLSQP (Sequential Least Squares Programming)             |
+| **Estimator**         | Backend for efficiently calculating the expectation value $\langle\hat{H}_{\text{qubit}}\rangle$.                 | AerEstimator (Qiskit Simulator)                          |
 
-Quantum Significance
-
-Value/Technique Used
-
-Molecule Geometry
-
-Defines the fixed nuclear potential.
-
-$\text{O}(0,0,0); \text{H}(\pm 0.757, 0.586, 0)$
-
-Basis Set
-
-Dictates the dimensionality of the electronic problem (number of molecular orbitals).
-
-STO-3G (Minimal Basis Set)
-
-Mapping
-
-Bridge between chemistry (fermions) and quantum computing (qubits).
-
-JordanWignerMapper
-
-Initial State
-
-Provides a reasonable starting point for the VQE optimization.
-
-HartreeFock state
-
-Ansatz
-
-The quantum circuit structure used to prepare the trial wavefunction $\Psi(\vec{\theta})$.
-
-UCCSD
-
-Optimizer
-
-Classical routine to find the optimal parameters $\vec{\theta}$.
-
-SLSQP (Sequential Least Squares Programming)
-
-Estimator
-
-Backend for efficiently calculating the expectation value $\langle\hat{H}_{\text{qubit}}\rangle$.
-
-AerEstimator (Qiskit Simulator)
 
 Getting Started
 
