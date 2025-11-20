@@ -133,4 +133,4 @@ Iteration:   0 | Energy: -84.164242824108
 Iteration:   1 | Energy: -84.173264777901
 ...
 VQE Simulation Complete
-Final Ground State Energy: -84.147457733336 Hartrees 
+Final Ground State Energy: around -76 Hartrees (takes too long)
